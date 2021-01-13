@@ -5,6 +5,7 @@
   "homepage": "https://olegbirykov.github.io/react-7/",
   "dependencies": {
     "cra-template": "1.1.1",
+    "moment": "^2.29.1",
     "prop-types": "^15.7.2",
     "push-dir": "^0.4.1",
     "react": "^17.0.1",
