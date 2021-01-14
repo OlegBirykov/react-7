@@ -2,17 +2,21 @@ import PropTypes from 'prop-types';
 import {nanoid} from 'nanoid';
 import Video from './Video';
 import Article from './Article';
+import withSpecial from './withSpecial';
 
 function List(props) {
   const { list } = props;  
+
+  const VideoSpecial = withSpecial(Video);
+  const ArticleSpecial = withSpecial(Article);
  
   const content = list.map(item => {
     switch (item.type) {
       case 'video':
-        return <Video {...item} key={nanoid()} />;
+        return <VideoSpecial {...item} key={nanoid()} />;
 
       case 'article':
-        return <Article {...item} key={nanoid()} />;
+        return <ArticleSpecial {...item} key={nanoid()} />;
 
       default:
         return null;
